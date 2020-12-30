@@ -1,0 +1,25 @@
+package com.jpetstore.cucumber.steps;
+
+import DataflowImporterSteps;
+import net.serenitybdd.junit.runners.SerenityRunner;
+import net.thucydides.core.annotations.Managed;
+import net.thucydides.core.annotations.Steps;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.openqa.selenium.WebDriver;
+
+@RunWith(SerenityRunner.class)
+public class StepsTester {
+
+    @Managed
+    WebDriver driver;
+
+    @Steps
+    DataflowImporterSteps importer;
+
+    @Test
+    public void someTest() {
+        importer.navigateToLoginPage();
+        importer.doLogin("tapestry", "tapestry123");
+    }
+}
