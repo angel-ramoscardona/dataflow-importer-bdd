@@ -40,4 +40,9 @@ public class DataflowImporterInstallationSteps {
   public void installNewDataflowImporterSolution( String newImporterSolutionName ) {
     importer.installNewDataflowImporterSolution( newImporterSolutionName );
   }
+
+  @Then( "^Installation of Importer fails$" )
+  public void installationOfImporterFails() {
+    importer.installNewDataflowImporterSolutionWhenAlreadyInstalled();
+  }
 }

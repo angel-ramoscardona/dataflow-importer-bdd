@@ -83,4 +83,8 @@ public class DataflowImporterSteps {
 
     return installPage.installNewDataflowImporterSolution( newImporterSolutionName );
   }
+
+  public InstallPage installNewDataflowImporterSolutionWhenAlreadyInstalled() {
+    return installPage.installNewDataflowImporterSolutionWhenAlreadyInstalled();
+  }
 }

@@ -95,4 +95,14 @@ public class InstallPage extends BasePage {
     }
     webElement.sendKeys( Keys.BACK_SPACE );
   }
+
+  public InstallPage installNewDataflowImporterSolutionWhenAlreadyInstalled() {
+
+    installButton.click();
+    waitForAllTextToAppear( "Installing Solution dataflow-importer", "Output" );
+    waitForTextToDisappear( "Success" );
+    closeButton.click();
+
+    return this;
+  }
 }
